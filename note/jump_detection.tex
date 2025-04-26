@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{style}
+
+\begin{document}
+\title{Jump Detection}
+%\author{Hyungjin Kim
+%\\{\it\small Deutsches Elektronen-Synchrotron DESY, Notkestr. 85, 22607 Hamburg, Germany}}
+\maketitle
+
+The jump time series is defined as
+\begin{align}
+x_t
+= 
+\frac{r_t}{f_t \sigma_t}
+\end{align}
+where $r_t = \ln( p_t / p_{t-1})$ is 1-minute return, $f_t$ is an estimator of intraday periodicity, and $\sigma_t$ is an estimator for the local volatility. The $\sigma_t$ is defined as
+\begin{align}
+\sigma_t^2
+= \frac{\pi}{2 K}
+\sum_{i=1}^{390} 
+|r_{t-i}| |r_{t-i+1}|
+\end{align}
+
+
+
+
+\bibliographystyle{utphys}
+\bibliography{ref}
+\end{document}
+
+
