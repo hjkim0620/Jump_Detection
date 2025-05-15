@@ -23,6 +23,39 @@ where $r_t = \ln( p_t / p_{t-1})$ is 1-minute return, $f_t$ is an estimator of i
 \end{align}
 
 
+\section{Wavelet}
+\subsection{Continuous Wavelet}
+What is a wavelet? A function $\psi(x)$ is called a wavelet if it satisfies
+\begin{align}
+&
+\int_{-\infty}^{\infty} dx \, \psi(x)  = 0
+\\
+&
+\int_{-\infty}^{\infty} d\omega \, \frac{|\psi(\omega)|^2}{\omega} = C_\psi < 0
+\end{align}
+Here $C_\psi$ is called admissible constant. A wavelet family can be generated from the above mother wavelet by translation and dilation
+\begin{align}
+\psi_{a,b}(x) 
+= \frac{1}{\sqrt{a}} \psi \left( \frac{x - b}{a} \right)
+\end{align}
+The parameter $a$ controls the dilation, while $b$ controls the shift of the wavelet. 
+
+The {\it continuous wavelet transformation} of a function $f(x)$ is defined by
+\begin{align}
+W f(a,b) = \int_{-\infty}^\infty dx \, f(x) \psi_{a,b} (x)
+\end{align}
+while the inverse transformation is defined as
+
+%\subsection{Examples of Wavelet}
+%\subsubsection{Haar}
+
+\subsection{Discrete Wavelet}
+In the discrete case, a family of wavelets is constructed from the mother wavelet via
+\begin{align}
+\psi_{j,k}(x) = 2^{-j / 2} \psi( 2^{-j} x - k)
+\end{align}
+for $j, k \in {\mathbb Z}$. 
+
 
 
 \bibliographystyle{utphys}
