@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.25)  15 MAY 2025 21:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.25)  26 MAY 2025 21:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -927,26 +927,25 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 LaTeX Warning: No \author given.
 
-No file jump_detection.bbl.
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./jump_detection.aux)
+(./jump_detection.bbl) [2] (./jump_detection.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `jump_detection.out' has not changed.
-(rerunfilecheck)             Checksum: 8E5D3C85B0F0FFB7AD94FC8600FD88DE;368.
+(rerunfilecheck)             Checksum: 8E364B402313A4012CD578DC409CE748;404.
  ) 
 Here is how much of TeX's memory you used:
- 22693 strings out of 474116
- 419271 string characters out of 5743682
- 1942187 words of memory out of 5000000
- 44609 multiletter control sequences out of 15000+600000
+ 22709 strings out of 474116
+ 419551 string characters out of 5743682
+ 1947187 words of memory out of 5000000
+ 44614 multiletter control sequences out of 15000+600000
  566243 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,107p,417b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,107p,417b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -959,10 +958,10 @@ texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on jump_detection.pdf (1 page, 123348 bytes).
+Output written on jump_detection.pdf (2 pages, 130762 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 115 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

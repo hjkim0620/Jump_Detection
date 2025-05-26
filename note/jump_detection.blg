@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: jump_detection.aux
+The style file: utphys.bst
+Database file #1: ref.bib
+You've used 1 entry,
+            2438 wiz_defined-function locations,
+            582 strings with 4221 characters,
+and the built_in function-call counts, 200 in all, are:
+= -- 18
+> -- 5
+< -- 0
++ -- 2
+- -- 1
+* -- 9
+:= -- 32
+add.period$ -- 2
+call.type$ -- 1
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 14
+empty$ -- 27
+format.name$ -- 1
+if$ -- 48
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 7
+num.names$ -- 2
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 2
+stack$ -- 0
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 1
+width$ -- 2
+write$ -- 10

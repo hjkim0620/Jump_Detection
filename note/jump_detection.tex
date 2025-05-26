@@ -8,6 +8,74 @@
 %\\{\it\small Deutsches Elektronen-Synchrotron DESY, Notkestr. 85, 22607 Hamburg, Germany}}
 \maketitle
 
+Here we consider time series and ways to detect discontinuities or sudden jumps in such time series. We begin by reviewing a wavelet decomposition of time series data. For details, see Ref.~\cite{1992tlw..conf.....D}.
+
+\section{Wavelet}
+\subsection{Continuous Wavelet}
+What is a wavelet? A function $\psi(x)$ is called a wavelet if it satisfies
+\begin{align}
+&
+\int_{-\infty}^{\infty} dx \, \psi(x)  = 0
+\\
+&
+\int_{-\infty}^{\infty} \frac{d\omega}{2\pi} \, \frac{|\psi(\omega)|^2}{\omega} = C_\psi < 0
+\end{align}
+Here $C_\psi$ is called admissible constant. A wavelet family can be generated from the above mother wavelet by translation and dilation
+\begin{align}
+\psi_{a,b}(x) 
+= \frac{1}{\sqrt{a}} \psi \left( \frac{x - b}{a} \right)
+\end{align}
+The parameter $a$ controls the dilation, while $b$ controls the shift of the wavelet. 
+
+The {\it continuous wavelet transformation} (CWT) of a function $f(x)$ is defined by
+\begin{align}
+W f(a,b) = \int_{-\infty}^\infty dx \,  f(x) \psi^*_{a,b} (x)
+\equiv \langle f, \psi_{a,b}  \rangle
+\end{align}
+The angle bracket denotes $L^2$-inner product. The inverse transformation is defined as
+\begin{align}
+f(x) 
+= 
+\frac{1}{C_\psi} 
+\int_{-\infty}^\infty \frac{da}{a^2}
+\int_{-\infty}^{\infty} db \, 
+Wf(a,b) \, \psi_{a,b}(x).
+\end{align}
+This continuous wavelet decomposition can be used to detect jump. Consider a Heaviside step function $H(x)$. The continuous wavelet transformation of $H(x)$ is
+\begin{align}
+W f (a,b) 
+&= \int_{-\infty}^{\infty} \, dx \, H(x) \psi^*_{a,b}(x)
+= \int_{0}^{\infty} \, \frac{dx}{\sqrt{a}} \psi^*\Big( \frac{x-b}{a} \Big).
+\end{align}
+From the above expression, we see that $Wf(a,0) / \sqrt{a}$ takes a constant value regardless of the value $a$. This indicates a discontinuity at $b=0$. In general, if $Wf(a,b) / \sqrt{a}$ takes a constant value for all $a$ at a particular $b$, this signals a discontinuity of the original function $f(x)$ at $x=b$. 
+
+
+
+
+
+%\subsection{Examples of Wavelet}
+%\subsubsection{Haar}
+
+\subsection{Discrete Wavelet}
+In the discrete case, a family of wavelets is constructed from the mother wavelet via
+\begin{align}
+\psi_{j,k}(x) = 2^{-j / 2} \psi( 2^{-j} x - k)
+\end{align}
+for $j, k \in {\mathbb Z}$. The discrete wavelet transformation is defined as
+\begin{align}
+W f_{j,k} = \langle f,\, \psi_{j,k}  \rangle
+= \int_{-\infty}^{\infty} dx \, \psi^*_{j,k}(x) f(x) 
+\end{align}
+The inverse transformation is 
+\begin{align}
+f(x) = \sum_{j,k} \psi_{j,k}(x) Wf_{j,k}
+\end{align}
+
+
+
+\appendix
+\section{}
+
 The jump time series is defined as
 \begin{align}
 x_t
@@ -21,40 +89,6 @@ where $r_t = \ln( p_t / p_{t-1})$ is 1-minute return, $f_t$ is an estimator of i
 \sum_{i=1}^{390} 
 |r_{t-i}| |r_{t-i+1}|
 \end{align}
-
-
-\section{Wavelet}
-\subsection{Continuous Wavelet}
-What is a wavelet? A function $\psi(x)$ is called a wavelet if it satisfies
-\begin{align}
-&
-\int_{-\infty}^{\infty} dx \, \psi(x)  = 0
-\\
-&
-\int_{-\infty}^{\infty} d\omega \, \frac{|\psi(\omega)|^2}{\omega} = C_\psi < 0
-\end{align}
-Here $C_\psi$ is called admissible constant. A wavelet family can be generated from the above mother wavelet by translation and dilation
-\begin{align}
-\psi_{a,b}(x) 
-= \frac{1}{\sqrt{a}} \psi \left( \frac{x - b}{a} \right)
-\end{align}
-The parameter $a$ controls the dilation, while $b$ controls the shift of the wavelet. 
-
-The {\it continuous wavelet transformation} of a function $f(x)$ is defined by
-\begin{align}
-W f(a,b) = \int_{-\infty}^\infty dx \, f(x) \psi_{a,b} (x)
-\end{align}
-while the inverse transformation is defined as
-
-%\subsection{Examples of Wavelet}
-%\subsubsection{Haar}
-
-\subsection{Discrete Wavelet}
-In the discrete case, a family of wavelets is constructed from the mother wavelet via
-\begin{align}
-\psi_{j,k}(x) = 2^{-j / 2} \psi( 2^{-j} x - k)
-\end{align}
-for $j, k \in {\mathbb Z}$. 
 
 
 
